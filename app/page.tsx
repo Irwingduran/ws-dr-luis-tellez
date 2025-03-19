@@ -216,21 +216,21 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 gap-8">
               {/* Service 1 */}
               <Card className="overflow-hidden">
                 <div className="aspect-video relative">
                   <Image
                     src="/placeholder.svg?height=300&width=500"
-                    alt="Lipoescultura 360"
+                    alt="Bichectomia"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Lipoescultura 360</h3>
+                  <h3 className="text-xl font-bold mb-2">Bichectomia</h3>
                   <p className="text-muted-foreground mb-4">
-                  Contorno corporal integral que aborda todas las zonas para conseguir una silueta armoniosa.
+                  La bichectomía es un procedimiento quirúrgico de carácter estético o funcional en el que se elimina la grasa presente en las mejillas
                   </p>
                   <Link href="#" className="text-primary inline-flex items-center">
                     Ver más <ChevronRight className="h-4 w-4 ml-1" />
@@ -243,31 +243,15 @@ export default function Home() {
                 <div className="aspect-video relative">
                   <Image
                     src="/placeholder.svg?height=300&width=500"
-                    alt="Aumento de Busto"
+                    alt="Rinoplastia"
                     fill
                     className="object-cover"
                   />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Aumento de Busto</h3>
-                  <p className="text-muted-foreground mb-4">
-                  Procedimientos de aumento mamario personalizados para lograr resultados de aspecto natural.
-                  </p>
-                  <Link href="#" className="text-primary inline-flex items-center">
-                    Ver más <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
-                </CardContent>
-              </Card>
-
-              {/* Service 3 */}
-              <Card className="overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image src="/placeholder.svg?height=300&width=500" alt="Rinoplastia" fill className="object-cover" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">Rinoplastia</h3>
                   <p className="text-muted-foreground mb-4">
-                  Rinoplastia para mejorar la armonía facial y corregir problemas estructurales.
+                  La rinoplastia es la cirugía que modifica la forma de la nariz.
                   </p>
                   <Link href="#" className="text-primary inline-flex items-center">
                     Ver más <ChevronRight className="h-4 w-4 ml-1" />
@@ -275,26 +259,7 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              {/* Service 4 */}
-              <Card className="overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/placeholder.svg?height=300&width=500"
-                    alt="Manga Gastrica"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Manga Gastrica</h3>
-                  <p className="text-muted-foreground mb-4">
-                  Procedimiento de manga gástrica para una pérdida de peso eficaz y sostenible.
-                  </p>
-                  <Link href="#" className="text-primary inline-flex items-center">
-                    Ver más <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
-                </CardContent>
-              </Card>
+           
             </div>
 
             
@@ -346,7 +311,7 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <div>
-                      <h3 className="font-medium">Hours</h3>
+                      <h3 className="font-medium">Horario</h3>
                       <p className="text-muted-foreground">
                         Lunes - Viernes: 10am - 8pm
                         <br />
