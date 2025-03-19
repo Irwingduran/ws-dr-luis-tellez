@@ -3,9 +3,12 @@ import Link from "next/link"
 import { Star, MapPin, Phone, Mail, Clock, ChevronRight, ChevronLeft, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import SocialMediaButtons from "@/components/social-media-buttons"
 
 export default function Home() {
   return (
+    <>
+    <SocialMediaButtons/>
     <div className="flex min-h-screen flex-col">
       {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -218,7 +221,7 @@ export default function Home() {
 
             <div className="grid sm:grid-cols-2 gap-8">
               {/* Service 1 */}
-              <Card className="overflow-hidden">
+            <Card className="overflow-hidden"> <Link href="/service1"> 
                 <div className="aspect-video relative">
                   <Image
                     src="/placeholder.svg?height=300&width=500"
@@ -236,10 +239,11 @@ export default function Home() {
                     Ver más <ChevronRight className="h-4 w-4 ml-1" />
                   </Link>
                 </CardContent>
-              </Card>
+                </Link> </Card>
 
               {/* Service 2 */}
-              <Card className="overflow-hidden">
+            
+           <Card className="overflow-hidden"><Link href="/service2">  
                 <div className="aspect-video relative">
                   <Image
                     src="/placeholder.svg?height=300&width=500"
@@ -257,8 +261,8 @@ export default function Home() {
                     Ver más <ChevronRight className="h-4 w-4 ml-1" />
                   </Link>
                 </CardContent>
-              </Card>
-
+                </Link></Card>
+            
            
             </div>
 
@@ -784,6 +788,7 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   )
 }
 
