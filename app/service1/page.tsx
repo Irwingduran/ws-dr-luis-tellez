@@ -1,14 +1,69 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, Check, Clock, Calendar, ShieldCheck, Award, Sparkles, Star, ArrowLeft } from "lucide-react"
+import { Check, Clock, Calendar, ShieldCheck, Award, Sparkles, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Footer from "@/components/footer"
+import SocialMediaButtons from "@/components/social-media-buttons"
 
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col">
+       <SocialMediaButtons/>
+       {/* Navbar */}
+       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/"
+              alt="Logo"
+              width={32}
+              height={32}
+              className="rounded-full"
+            />
+            <span className="text-xl font-bold">Dr. Luis M. Téllez Bernés</span>
+          </Link>
+          <nav className="hidden md:flex gap-6">
+            <Link href="/#home" className="text-sm font-medium hover:text-primary">
+              Inicio
+            </Link>
+            <Link href="/#about" className="text-sm font-medium hover:text-primary">
+              Conóceme
+            </Link>
+            <Link href="/#services" className="text-sm font-medium hover:text-primary">
+              Servicios
+            </Link>
+            <Link href="/#reviews" className="text-sm font-medium hover:text-primary">
+              Reseñas
+            </Link>
+            <Link href="/#contact" className="text-sm font-medium hover:text-primary">
+              Contacto
+            </Link>
+          </nav>
+          <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta"><Button className="hidden md:inline-flex">Agendar Cita</Button></Link>
+          <Button variant="outline" size="icon" className="md:hidden">
+            <span className="sr-only">menu</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </Button>
+        </div>
+      </header>
+
+
       {/* Hero Section */}
       <section className="relative">
         <div className="absolute inset-0 z-0">
@@ -21,7 +76,7 @@ export default function Page() {
           />
         </div>
         <div className="container relative z-10 py-24 md:py-32 lg:py-40">
-          <div className="max-w-2xl space-y-4 text-white">
+          <div className="max-w-2xl space-y-4 text-white m-4">
             <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
               Procedimiento Premium
             </div>
@@ -46,7 +101,7 @@ export default function Page() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 m-4">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -101,19 +156,23 @@ export default function Page() {
               </div>
             </div>
             <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-xl overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=600&width=600"
-                alt="Procedimiento de Rinoplastia"
-                fill
-                className="object-cover"
-              />
+              {/* Video de Facebook */}
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F529244346052462&show_text=0&width=560"
+                width="100%"
+                height="100%"
+                style={{ border: "none", overflow: "hidden" }}
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                className="rounded-xl"
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-muted/50">
+      <section className="py-16 md:py-24 bg-muted/50 m-4">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Beneficios</div>
@@ -202,7 +261,7 @@ export default function Page() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center m-4">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">¿Listo para Transformar tu Perfil?</h2>
               <p className="text-primary-foreground/90 text-lg">
@@ -233,6 +292,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </div>
   );
 }
