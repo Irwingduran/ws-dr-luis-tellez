@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "./ui/button";
 
 interface ServiceSectionProps {
   imageUrl: string;
@@ -29,9 +30,9 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl font-bold text-neutralDGrey">{title}</h2>
           <p className="text-gray-700 mt-4 p-5">{description}</p>
-          <a href="https://www.findoctor.com.mx/doctores/bruno-rubi-lopez" target="_blank"><button className='btn-primary text-white'>
+          <a href="https://www.findoctor.com.mx/doctores/luis-miguel-tellez-bernes" target="_blank"><Button className='btn-primary text-white'>
           {buttonText}
-                    </button>
+                    </Button>
                     </a>
         </div>
       </div>

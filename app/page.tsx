@@ -8,6 +8,7 @@ import SocialMediaButtons from "@/components/social-media-buttons"
 import React, { useRef } from 'react';
 import Footer from "@/components/footer"
 import Carousel from "@/components/carousel"
+import Mockup from "@/components/mockup"
 
 
 export default function Home() {
@@ -393,6 +394,9 @@ export default function Home() {
   </div>
 </section>
 
+<section>
+  <Mockup/>
+</section>
         {/* Reviews Section */}
         <section id="reviews" className="py-16">
       <div className="container mx-auto px-4">
