@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import SocialMediaButtons from "@/components/social-media-buttons"
 import React, { useRef } from 'react';
 import Footer from "@/components/footer"
+import Carousel from "@/components/carousel"
 
 
 export default function Home() {
@@ -40,7 +41,7 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/"
+              src="/logo.png"
               alt="Logo"
               width={32}
               height={32}
@@ -562,7 +563,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+<div>
+  <Carousel/>
+</div>
         {/* Contact Section */}
         <section id="contact" className="py-16 md:py-24">
           <div className="container">

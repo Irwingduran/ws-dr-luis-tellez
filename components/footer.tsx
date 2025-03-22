@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="space-y-4">
                   <Link href="/" className="flex items-center gap-2">
                     <Image
-                      src="/placeholder.svg?height=32&width=32"
+                      src="/logo.png"
                       alt="Logo"
                       width={32}
                       height={32}

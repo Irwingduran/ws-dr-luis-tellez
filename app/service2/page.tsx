@@ -15,7 +15,7 @@ export default function Page() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/"
+              src="/logo.png"
               alt="Logo"
               width={32}
               height={32}
@@ -67,7 +67,7 @@ export default function Page() {
       <section className="relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1920"
+            src="/img1.jpg"
             alt="Bichectomía"
             fill
             className="object-cover brightness-[0.6]"
@@ -82,7 +82,7 @@ export default function Page() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Bichectomía</h1>
             <p className="text-lg md:text-xl">
               Reduce el volumen de tus mejillas y define tu rostro con este procedimiento mínimamente invasivo realizado
-              por el Dr. Smith.
+              por el Dr. Téllez.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
@@ -273,7 +273,7 @@ export default function Page() {
             </div>
             <div className="relative aspect-square md:aspect-auto md:h-[400px] rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/img1.jpg"
                 alt="Resultados de Bichectomía"
                 fill
                 className="object-cover"

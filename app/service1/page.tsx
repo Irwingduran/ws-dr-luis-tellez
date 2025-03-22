@@ -15,7 +15,7 @@ export default function Page() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/"
+              src="/logo.png"
               alt="Logo"
               width={32}
               height={32}
@@ -68,7 +68,7 @@ export default function Page() {
       <section className="relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1920"
+            src="/img2.jpg"
             alt="Rinoplastia"
             fill
             className="object-cover brightness-[0.6]"
@@ -273,7 +273,7 @@ export default function Page() {
             </div>
             <div className="relative aspect-square md:aspect-auto md:h-[400px] rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/slide4.jpg"
                 alt="Resultados de Rinoplastia"
                 fill
                 className="object-cover"
