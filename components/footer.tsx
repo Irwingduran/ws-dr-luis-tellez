@@ -22,7 +22,7 @@ const Footer = () => {
                   Transformando vidas a través de la cirugía plástica experta y la atención compasiva.
                   </p>
                   <div className="flex gap-4">
-                    <Link href="#" className="text-muted-foreground hover:text-foreground">
+                    <Link href="https://www.facebook.com/dr.LuisMiguelTellez " className="text-muted-foreground hover:text-foreground">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -39,7 +39,7 @@ const Footer = () => {
                       </svg>
                       <span className="sr-only">Facebook</span>
                     </Link>
-                    <Link href="#" className="text-muted-foreground hover:text-foreground">
+                    <Link href="https://www.instagram.com/dr.luistellez/" className="text-muted-foreground hover:text-foreground">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -58,23 +58,7 @@ const Footer = () => {
                       </svg>
                       <span className="sr-only">Instagram</span>
                     </Link>
-                    <Link href="#" className="text-muted-foreground hover:text-foreground">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-5 w-5"
-                      >
-                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                      </svg>
-                      <span className="sr-only">Twitter</span>
-                    </Link>
+                   
                   </div>
                 </div>
     
@@ -97,12 +81,12 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="#reviews" className="text-muted-foreground hover:text-foreground">
+                      <Link href="/#reviews" className="text-muted-foreground hover:text-foreground">
                         Reseñas
                       </Link>
                     </li>
                     <li>
-                      <Link href="#contact" className="text-muted-foreground hover:text-foreground">
+                      <Link href="/#contact" className="text-muted-foreground hover:text-foreground">
                         Contacto
                       </Link>
                     </li>
@@ -112,26 +96,18 @@ const Footer = () => {
                 <div>
                   <h3 className="font-medium text-lg mb-4">Servicios</h3>
                   <ul className="space-y-2">
+                   
                     <li>
-                      <Link href="#" className="text-muted-foreground hover:text-foreground">
-                        Lipoescultura 360
+                      <Link href="/service2" className="text-muted-foreground hover:text-foreground">
+                      Bichectomia
                       </Link>
                     </li>
                     <li>
-                      <Link href="#" className="text-muted-foreground hover:text-foreground">
-                        Aumento de Busto
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" className="text-muted-foreground hover:text-foreground">
+                      <Link href="/service1" className="text-muted-foreground hover:text-foreground">
                         Rinoplastia
                       </Link>
                     </li>
-                    <li>
-                      <Link href="#" className="text-muted-foreground hover:text-foreground">
-                        Manga Gastrica
-                      </Link>
-                    </li>
+                   
                   </ul>
                 </div>
     

@@ -85,16 +85,11 @@ export default function Page() {
               por el Dr. Smith.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
               <Button size="lg" className="font-medium">
                 Agendar Consulta
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 backdrop-blur text-white border-white/20 hover:bg-white/20"
-              >
-                Ver Antes y Después
-              </Button>
+              </Button></Link>
+             
             </div>
           </div>
         </div>
@@ -269,16 +264,11 @@ export default function Page() {
                 discutir cómo la bichectomía puede ayudarte a alcanzar tus metas estéticas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
+               <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
                 <Button size="lg" variant="secondary">
                   Agendar Consulta
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
-                >
-                  Contáctanos
-                </Button>
+                </Button></Link>
+               
               </div>
             </div>
             <div className="relative aspect-square md:aspect-auto md:h-[400px] rounded-xl overflow-hidden">
