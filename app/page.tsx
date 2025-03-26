@@ -9,30 +9,30 @@ import React, { useRef } from 'react';
 import Footer from "@/components/footer"
 import Carousel from "@/components/carousel"
 import Mockup from "@/components/mockup"
-
+import { Quote as QuoteIcon, Star as StarIcon } from 'lucide-react';
 
 export default function Home() {
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
-  // Función para mover el carrusel hacia la izquierda
-  const scrollLeft = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: -320, // Ajusta este valor según el ancho de las tarjetas
-        behavior: "smooth",
-      });
+  // Función de desplazamiento mejorada
+  const scroll = (direction: 'left' | 'right') => {
+    if (!carouselRef.current) return;
+  
+    const { scrollLeft, clientWidth, scrollWidth } = carouselRef.current;
+    const scrollAmount = direction === 'right' ? clientWidth : -clientWidth;
+    const isAtStart = scrollLeft <= 0;
+    const isAtEnd = scrollLeft + clientWidth >= scrollWidth;
+  
+    if ((direction === 'left' && isAtStart) || (direction === 'right' && isAtEnd)) {
+      return;
     }
+  
+    carouselRef.current.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
   };
-
-  // Función para mover el carrusel hacia la derecha
-  const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: 320, // Ajusta este valor según el ancho de las tarjetas
-        behavior: "smooth",
-      });
-    }
-  };
+  
   return (
     <>
     <SocialMediaButtons/>
@@ -113,14 +113,14 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 md:py-24 bg-muted/50">
+        <section id="about" className="py-16 md:py-24 bg-gray-200">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-xl overflow-hidden">
                 <Image src="/profile.jpg" alt="Dr" fill className="object-cover" />
               </div>
               <div className="space-y-6">
-                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
+                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">
                   Sobre el Dr. Téllez
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -222,7 +222,7 @@ export default function Home() {
     <div className="mb-16 flex flex-col md:flex-row items-center gap-8" style={{ maxWidth: '800px', margin: '0 auto' }}>
 
   {/* Contenedor del video */}
-  <div className="flex-1 rounded-xl overflow-hidden shadow-lg py-6" style={{ maxHeight: '100vh', maxWidth: '400px' }}>
+  <div className="flex-1 rounded-xl bg-gray-50/50 overflow-hidden shadow-lg py-6" style={{ maxHeight: '100vh', maxWidth: '400px' }}>
     <div className="relative" style={{ paddingTop: '177.78%' }}> {/* 9:16 aspect ratio */}
       <iframe
         src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1627772480978271&show_text=0&width=560"
@@ -262,10 +262,10 @@ export default function Home() {
 </div>
   
         {/* Services Section */}
-<section id="services" className="py-16 ">
+<section id="services" className="py-16 bg-gray-50">
   <div className="container">
     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Mis Servicios</div>
+      <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">Mis Servicios</div>
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Procedimientos Estéticos</h2>
       <p className="text-muted-foreground">
         Ofrecemos una gama de procedimientos adaptados a sus necesidades y objetivos únicos
@@ -327,7 +327,7 @@ export default function Home() {
   <div className="container">
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="space-y-6">
-        <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Mi ubicación</div>
+        <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">Mi ubicación</div>
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Visítanos para una mejor valoración</h2>
         <p className="text-muted-foreground">
           Contamos con el mejor equipo y con la última tecnología, diseñada pensando en su comodidad. Estamos
@@ -397,160 +397,141 @@ export default function Home() {
 <section>
   <Mockup/>
 </section>
-        {/* Reviews Section */}
-        <section id="reviews" className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
-            Reseñas
-          </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Lo que dicen nuestros pacientes
-          </h2>
-          <p className="text-muted-foreground">
-            Lea los testimonios de pacientes que han transformado sus vidas con
-            nuestros procedimientos.
-          </p>
-        </div>
-
-        <div className="relative">
-          {/* Botón de flecha izquierda */}
-          <button
-            onClick={scrollLeft}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur p-2 rounded-full shadow-md z-10"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-
-          {/* Contenedor del carrusel */}
-          <div
-            ref={carouselRef}
-            className="flex gap-6 overflow-x-auto py-4 scroll-smooth scrollbar-hide"
-            style={{
-              scrollSnapType: "x mandatory", // Asegura que las tarjetas se alineen correctamente
-            }}
-          >
-            {/* Tarjeta de reseña */}
-            {[
-              {
-                name: "Sarah Pérez",
-                review:
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi nisi dicta deserunt nihil voluptate rerum accusamus quae quaerat ad recusandae laudantium nesciunt nam temporibus, fuga ipsum exercitationem iure dignissimos!",
-              },
-              {
-                name: "Michael Rodríguez",
-                review:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente magni repellat. Labore magnam minima adipisci hic fugit saepe nemo pariatur. Harum velit cum numquam dolorum maxime culpa voluptate cumque?",
-              },
-              {
-                name: "Jennifer Martínez",
-                review:
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis doloribus nobis, hic cumque repellat obcaecati delectus, asperiores cum tempora optio sit error eligendi eaque non ipsa odit quisquam molestias natus!",
-              },
-            ].map((review, index) => (
-              <div
-                key={index}
-                className="w-fit p-6 flex-shrink-0 bg-white rounded-lg shadow-md"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-12 w-12 rounded-full bg-muted flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-6 w-6 text-muted-foreground"
-                    >
-                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                      <circle cx="12" cy="7" r="4" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">{review.name}</h4>
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <svg
-                          key={i}
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="yellow"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-4 w-4"
-                        >
-                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-8 w-8 text-primary/20"
-                  >
-                    <path d="M12 17c1.66 0 3-1.34 3-3V7h-6v3c0 1.66 1.34 3 3 3z" />
-                    <path d="M12 7V5c0-1.66-1.34-3-3-3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V11c0-1.66-1.34-3-3-3z" />
-                  </svg>
-                </div>
-                <p className="text-muted-foreground">{review.review}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Botón de flecha derecha */}
-          <button
-            onClick={scrollRight}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur p-2 rounded-full shadow-md z-10"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
-        </div>
+       
+{/* Reviews Section */}
+<section id="reviews" className="py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">
+        Reseñas
       </div>
-    </section>
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        Lo que dicen nuestros pacientes
+      </h2>
+      <p className="text-muted-foreground">
+        Lea los testimonios de pacientes que han transformado sus vidas con
+        nuestros procedimientos.
+      </p>
+    </div>
+
+    <div className="relative group">
+      {/* Botón izquierdo */}
+      <button
+        onClick={() => scroll('left')}
+        aria-label="Desplazar reseñas a la izquierda"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+        disabled={carouselRef.current?.scrollLeft === 0}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-5 w-5"
+        >
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+
+      {/* Carrusel con tarjetas rectangulares */}
+      <div
+        ref={carouselRef}
+        className="flex gap-6 overflow-x-auto py-4 scroll-smooth scrollbar-hide snap-x snap-mandatory"
+      >
+        {[
+          {
+            name: "Marysol Roldán",
+            review: "Yo lleve a mi mama por una alergia muy severa, no se le quitaba con nada, le mando tratamiento y gracias a Dios se recupero bastante.",
+            date: "Hace 2 semanas"
+          },
+          {
+            name: "Michael Rodríguez",
+            review: "Mi experiencia con el doctor y mi recuperación fueron excelentes, ¡gracias Doctor!",
+            date: "Hace 1 mes"
+          },
+          {
+            name: "Jennifer Martínez",
+            review: "Recomendado, a mi papá lo ayudó mucho el tratamiendo del doctor resetó.",
+            date: "Hace 3 semanas"
+          },
+        ].map((review, index) => (
+          <div
+            key={index}
+            className="w-[400px] h-[220px] flex-shrink-0 bg-white rounded-lg shadow-md p-6 snap-start flex flex-col" /* Rectangular */
+          >
+            {/* Encabezado sin avatar */}
+            <div className="mb-4">
+              <h4 className="font-medium text-lg">{review.name}</h4>
+              <div className="flex items-center gap-1 mt-1">
+                {[...Array(5)].map((_, i) => (
+                  <StarIcon key={i} className="h-4 w-4 text-yellow-400" />
+                ))}
+                <span className="text-xs text-gray-500 ml-2">{review.date}</span>
+              </div>
+            </div>
+            
+            {/* Icono de comillas */}
+            <div className="mb-2 text-primary/20">
+              <QuoteIcon className="h-6 w-6" />
+            </div>
+            
+            {/* Texto del comentario */}
+            <p className="text-gray-600 flex-grow line-clamp-4"> {/* Altura flexible */}
+              {review.review}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Botón derecho */}
+      <button
+        onClick={() => scroll('right')}
+        aria-label="Desplazar reseñas a la derecha"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg z-10 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-5 w-5"
+        >
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+
+    {/* Indicadores de posición */}
+    <div className="flex justify-center gap-2 mt-6">
+      {[1, 2, 3].map((_, i) => (
+        <button
+          key={i}
+          onClick={() => {
+            if (carouselRef.current) {
+              carouselRef.current.scrollTo({
+                left: carouselRef.current.clientWidth * i,
+                behavior: 'smooth'
+              });
+            }
+          }}
+          className="w-2 h-2 rounded-full bg-gray-300 hover:bg-primary transition-all"
+          aria-label={`Ir a la reseña ${i + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
 
 
         {/* Google Review Banner */}
@@ -561,9 +542,10 @@ export default function Home() {
                 <h2 className="text-2xl font-bold">¿Le gustan sus resultados?</h2>
                 <p>Comparte tu experiencia y ayuda a otros a encontrar su camino hacia la confianza.</p>
               </div>
+              <Link href="https://www.google.com.mx/maps/place/Dr.+Luis+Miguel+T%C3%A9llez+Bern%C3%A9s,+Otorrinolaring%C3%B3logo/@19.0456848,-98.2076301,17z/data=!4m8!3m7!1s0x85cfc15cd288fe93:0xdf6ba3461ab74629!8m2!3d19.0456848!4d-98.2050552!9m1!1b1!16s%2Fg%2F11h4cm77yd?hl=es&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNjM5SAFQAw%3D%3D" target="_blank">
               <Button variant="secondary" className="m-3">
               Deja tu opinión en Google
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </section>
@@ -571,11 +553,11 @@ export default function Home() {
   <Carousel/>
 </div>
         {/* Contact Section */}
-        <section id="contact" className="py-16 md:py-24">
+        <section id="contact" className="py-16 md:py-24 bg-gray-50">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Contacto</div>
+                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">Contacto</div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Programe su consulta</h2>
                 <p className="text-muted-foreground">
                 Dé el primer paso hacia su nuevo yo. Póngase en contacto con nosotros para programar una consulta con el Dr. Téllez.
