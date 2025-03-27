@@ -40,7 +40,7 @@ export default function Page() {
               Contacto
             </Link>
           </nav>
-          <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta"><Button className="hidden md:inline-flex">Agendar Cita</Button></Link>
+          <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta"><Button className="hidden md:inline-flex">Agendar Cita</Button></Link>
           <Button variant="outline" size="icon" className="md:hidden">
             <span className="sr-only">menu</span>
             <svg
@@ -85,7 +85,7 @@ export default function Page() {
               por el Dr. Téllez.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
+              <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
               <Button size="lg" className="font-medium">
                 Agendar Consulta
               </Button></Link>
