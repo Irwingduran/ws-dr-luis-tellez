@@ -262,7 +262,7 @@ export default function Home() {
 </div>
   
         {/* Services Section */}
-<section id="services" className="py-16 bg-gray-50">
+        <section id="services" className="py-16 bg-gray-50">
   <div className="container">
     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
       <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">Mis Servicios</div>
@@ -272,16 +272,17 @@ export default function Home() {
       </p>
     </div>
 
-    <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+    <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto"> {/* Contenedor más ancho */}
       {/* Service 1 */}
       <Card className="overflow-hidden">
         <Link href="/service2">
-          <div className="aspect-video relative">
+          <div className="h-80 relative"> {/* Altura aumentada a 80 (h-80) */}
             <Image
               src="/bichectomia.webp"
               alt="Bichectomia"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw" /* Mejor rendimiento */
             />
           </div>
           <CardContent className="p-6">
@@ -299,12 +300,13 @@ export default function Home() {
       {/* Service 2 */}
       <Card className="overflow-hidden">
         <Link href="/service1">
-          <div className="aspect-video relative">
+          <div className="h-80 relative"> {/* Altura aumentada a 80 (h-80) */}
             <Image
               src="/rinoplastia.webp"
               alt="Rinoplastia"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw" /* Mejor rendimiento */
             />
           </div>
           <CardContent className="p-6">
@@ -685,4 +687,3 @@ export default function Home() {
     </>
   )
 }
-
