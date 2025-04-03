@@ -1,15 +1,16 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Phone, Mail, Clock, ChevronRight} from "lucide-react"
+import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import SocialMediaButtons from "@/components/social-media-buttons"
 import React, { useRef } from 'react';
 import Footer from "@/components/footer"
 import Carousel from "@/components/carousel"
 import Mockup from "@/components/mockup"
 import { Quote as QuoteIcon, Star as StarIcon } from 'lucide-react';
+import Services from "@/components/services"
+import Partners from "@/components/partners"
 
 export default function Home() {
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -32,73 +33,82 @@ export default function Home() {
       behavior: "smooth",
     });
   };
+
+
   
   return (
     <>
     <SocialMediaButtons/>
-    <div className="flex min-h-screen flex-col">
+    <div className="min-h-screen bg-blue-50">
       {/* Navbar */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={32}
-              height={32}
-              className="rounded-full"
-            />
-            <span className="text-xl font-bold">Dr. Luis M. Téllez Bernés</span>
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#home" className="text-sm font-medium hover:text-primary">
-              Inicio
-            </Link>
-            <Link href="#about" className="text-sm font-medium hover:text-primary">
-              Conóceme
-            </Link>
-            <Link href="#services" className="text-sm font-medium hover:text-primary">
-              Servicios
-            </Link>
-            <Link href="#reviews" className="text-sm font-medium hover:text-primary">
-              Reseñas
-            </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary">
-              Contacto
-            </Link>
-          </nav>
-          <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta"><Button className="hidden md:inline-flex">Agendar Cita</Button></Link>
-          <Button variant="outline" size="icon" className="md:hidden">
-            <span className="sr-only">menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </Button>
-        </div>
-      </header>
+      <header className="sticky top-0 z-50 w-full border-b bg-blue-50/95 backdrop-blur supports-[backdrop-filter]:bg-blue-50/60">
+  <div className="container flex h-16 items-center justify-between">
+    <Link href="/" className="flex items-center gap-2">
+      <Image
+        src="/logo.png"
+        alt="Logo"
+        width={32}
+        height={32}
+        className="rounded-full"
+      />
+      <span className="text-xl font-bold text-blue-900">Dr. Luis M. Téllez Bernés</span>
+    </Link>
+    
+    <nav className="hidden md:flex gap-6">
+      <Link href="/" className="text-sm font-medium text-blue-900 hover:text-blue-600 transition-colors">
+        Inicio
+      </Link>
+      <Link href="/#about" className="text-sm font-medium text-blue-900 hover:text-blue-600 transition-colors">
+        Conóceme
+      </Link>
+      <Link href="/#services" className="text-sm font-medium text-blue-900 hover:text-blue-600 transition-colors">
+        Servicios
+      </Link>
+      <Link href="/#reviews" className="text-sm font-medium text-blue-900 hover:text-blue-600 transition-colors">
+        Reseñas
+      </Link>
+      <Link href="/#contact" className="text-sm font-medium text-blue-900 hover:text-blue-600 transition-colors">
+        Contacto
+      </Link>
+    </nav>
+    
+    <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
+      <Button className="hidden md:inline-flex bg-blue-900 hover:bg-blue-700 text-white">
+        Agendar Cita
+      </Button>
+    </Link>
+    
+    <Button variant="outline" size="icon" className="md:hidden border-blue-200 text-blue-800 hover:bg-blue-100">
+      <span className="sr-only">menu</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-6 w-6"
+      >
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+    </Button>
+  </div>
+</header>
 
       <main className="flex-1 p-5">
         {/* Hero Section */}
         <section id="home" className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/bg-img.jpg"
+              src="/bg-img.png"
               alt="Hero Background"
               fill
-              className="object-cover brightness-[0.7]"
+              className="object-cover brightness-[0.7] rounded-xl"
               priority
             />
           </div>
@@ -113,17 +123,17 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 md:py-24 bg-gray-200">
-          <div className="container">
+        <section id="about" className="py-16 md:py-24">
+          <div className="container bg-blue-50">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-xl overflow-hidden">
                 <Image src="/profile.jpg" alt="Dr" fill className="object-cover" />
               </div>
               <div className="space-y-6">
-                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">
+                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-base text-primary">
                   Sobre el Dr. Téllez
                 </div>
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                <h2 className="text-3xl font-bold text-blue-950 tracking-tight sm:text-4xl">
                 Una trayectoria de excelencia en cirugía plástica
                 </h2>
                 <p className="text-muted-foreground">
@@ -218,11 +228,12 @@ export default function Home() {
           </div>
         </section>
 
-
-    <div className="mb-16 flex flex-col md:flex-row items-center gap-8" style={{ maxWidth: '800px', margin: '0 auto' }}>
+       {/* Presentation Vidio Section */}
+       <div className="bg-white rounded-xl p-6">
+        <div className="mb-16 flex flex-col bg-white md:flex-row items-center gap-8" style={{ maxWidth: '800px', margin: '0 auto' }}>
 
   {/* Contenedor del video */}
-  <div className="flex-1 rounded-xl bg-gray-50/50 overflow-hidden shadow-lg py-6" style={{ maxHeight: '100vh', maxWidth: '400px' }}>
+    <div className="flex-1 rounded-xl bg-white overflow-hidden shadow-lg py-6" style={{ maxHeight: '100vh', maxWidth: '400px' }}>
     <div className="relative" style={{ paddingTop: '177.78%' }}> {/* 9:16 aspect ratio */}
       <iframe
         src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1627772480978271&show_text=0&width=560"
@@ -241,96 +252,37 @@ export default function Home() {
         allowFullScreen
       ></iframe>
     </div>
-  </div>
+   </div>
 
   {/* Título y texto descriptivo */}
   <div className="flex-1 space-y-4">
-    <h2 className="text-2xl font-bold text-gray-900">
+    <h2 className="text-2xl font-bold text-blue-950">
       Aprende más sobre el Dr. Luis M. Téllez Bernés
     </h2>
     <p className="text-gray-600">
       En este video, el Dr. Téllez comparte su experiencia y enfoque en cirugía plástica y otorrinolaringología. Descubre cómo puede ayudarte a alcanzar tus objetivos de belleza y salud.
     </p>
     <div className="py-4">
-    <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
-      <Button className="bg-primary text-white hover:bg-primary/90">
+    <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
+      <Button className="bg-blue-900 text-white hover:bg-primary/90">
         Agendar una cita
       </Button>
     </Link>
     </div>
   </div>
-</div>
+        </div>
+        </div>
   
         {/* Services Section */}
-        <section id="services" className="py-16 bg-gray-50">
-  <div className="container">
-    <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">Mis Servicios</div>
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Procedimientos Estéticos</h2>
-      <p className="text-muted-foreground">
-        Ofrecemos una gama de procedimientos adaptados a sus necesidades y objetivos únicos
-      </p>
-    </div>
-
-    <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto"> {/* Contenedor más ancho */}
-      {/* Service 1 */}
-      <Card className="overflow-hidden">
-        <Link href="/service2">
-          <div className="h-80 relative"> {/* Altura aumentada a 80 (h-80) */}
-            <Image
-              src="/bichectomia.webp"
-              alt="Bichectomia"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw" /* Mejor rendimiento */
-            />
-          </div>
-          <CardContent className="p-6">
-            <h3 className="text-xl font-bold mb-2">Bichectomia</h3>
-            <p className="text-muted-foreground mb-4">
-              La bichectomía es un procedimiento quirúrgico de carácter estético o funcional en el que se elimina la grasa presente en las mejillas
-            </p>
-            <Link href="/service2" className="text-primary inline-flex items-center">
-              Ver más <ChevronRight className="h-4 w-4 ml-1" />
-            </Link>
-          </CardContent>
-        </Link>
-      </Card>
-
-      {/* Service 2 */}
-      <Card className="overflow-hidden">
-        <Link href="/service1">
-          <div className="h-80 relative"> {/* Altura aumentada a 80 (h-80) */}
-            <Image
-              src="/rinoplastia.webp"
-              alt="Rinoplastia"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw" /* Mejor rendimiento */
-            />
-          </div>
-          <CardContent className="p-6">
-            <h3 className="text-xl font-bold mb-2">Rinoplastia</h3>
-            <p className="text-muted-foreground mb-4">
-              La rinoplastia es la cirugía que modifica la forma de la nariz.
-            </p>
-            <Link href="/service1" className="text-primary inline-flex items-center">
-              Ver más <ChevronRight className="h-4 w-4 ml-1" />
-            </Link>
-          </CardContent>
-        </Link>
-      </Card>
-    </div>
-  </div>
-</section>
+        <Services/>
 
      {/* Location Section */}
-<section id="location" className="py-16 md:py-24 bg-muted/50">
+<section id="location" className="py-16 md:py-24 bg-white p-6 rounded-xl">
   <div className="container">
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="space-y-6">
-        <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">Mi ubicación</div>
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Visítanos para una mejor valoración</h2>
+        <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-base text-primary">Mi ubicación</div>
+        <h2 className="text-3xl font-bold text-blue-950 tracking-tight sm:text-4xl">Visítanos para una mejor valoración</h2>
         <p className="text-muted-foreground">
           Contamos con el mejor equipo y con la última tecnología, diseñada pensando en su comodidad. Estamos
           convenientemente situados en el corazón de la ciudad.
@@ -401,13 +353,13 @@ export default function Home() {
 </section>
        
 {/* Reviews Section */}
-<section id="reviews" className="py-16 bg-gray-50">
+<section id="reviews" className="py-16 bg-white rounded-xl">
   <div className="container mx-auto px-4">
     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-base text-primary">
+      <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-base text-primary">
         Reseñas
       </div>
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+      <h2 className="text-3xl font-bold text-blue-950 tracking-tight sm:text-4xl">
         Lo que dicen nuestros pacientes
       </h2>
       <p className="text-muted-foreground">
@@ -537,7 +489,7 @@ export default function Home() {
 
 
         {/* Google Review Banner */}
-        <section className="py-16 bg-primary text-primary-foreground rounded-xl">
+        <section className="py-16 bg-blue-950 text-primary-foreground rounded-xl p-6">
           <div className="container">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="space-y-2 text-center md:text-left m-3">
@@ -555,7 +507,7 @@ export default function Home() {
   <Carousel/>
 </div>
         {/* Contact Section */}
-        <section id="contact" className="py-16 md:py-24 bg-gray-50">
+        <section id="contact" className="py-16 md:py-24 bg-white">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
@@ -673,7 +625,7 @@ export default function Home() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full bg-blue-900">
                     Enviar
                   </Button>
                 </form>
@@ -681,9 +633,12 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Partners/>
         <Footer/>
       </main>
     </div>
     </>
   )
 }
+

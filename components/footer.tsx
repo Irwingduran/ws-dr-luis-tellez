@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { MapPin, Phone, Mail } from "lucide-react"
 const Footer = () => {
   return (
-          <footer className="bg-muted py-12 bg-white m-3">
+          <footer className="bg-muted rounded-xl p-6 py-12 bg-white m-3">
             <div className="container">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="space-y-4">

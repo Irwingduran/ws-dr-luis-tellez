@@ -15,7 +15,7 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
   buttonText,
 }) => {
   return (
-    <section className="flex items-center justify-center bg-white py-12 px-6">
+    <section className="flex items-center justify-center bg-blue-50 py-12 px-6">
       <div className="max-w-6xl flex flex-col md:flex-row items-center gap-8">
         {/* Imagen */}
         <div className="w-full md:w-1/2">
@@ -28,9 +28,9 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
 
         {/* Contenido */}
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-3xl font-bold text-neutralDGrey">{title}</h2>
+          <h2 className="text-3xl font-bold text-blue-950">{title}</h2>
           <p className="text-gray-700 mt-4 p-5">{description}</p>
-          <a href="https://www.findoctor.com.mx/doctores/luis-miguel-tellez-bernes" target="_blank"><Button className='btn-primary text-white'>
+          <a href="https://www.findoctor.com.mx/doctores/luis-miguel-tellez-bernes" target="_blank"><Button className='bg-blue-900 text-white'>
           {buttonText}
                     </Button>
                     </a>
