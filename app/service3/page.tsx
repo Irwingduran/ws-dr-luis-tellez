@@ -76,8 +76,8 @@ export default function Page() {
       <section className="relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/rino.png"
-            alt="Rinoplastia"
+            src="/Lipopapada.jpg"
+            alt="Lipopapada"
             fill
             className="object-cover brightness-[0.6]"
             priority
@@ -88,13 +88,12 @@ export default function Page() {
             <div className="inline-block rounded-lg opacity-70 bg-white px-3 py-1 text-sm text-blue-950">
               Procedimiento Premium
             </div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Rinoplastia</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Lipopapada</h1>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
               <Button size="lg" className="font-medium bg-blue-900">
                 Agendar Consulta
               </Button></Link>
-             
             </div>
           </div>
         </div>
@@ -107,17 +106,17 @@ export default function Page() {
           <div className="space-y-6">
   <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Procedimiento</div>
   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-blue-950">
-    Redefine tu Perfil con Rinoplastia
+    Redefine tu Perfil con Lipopapada
   </h2>
   <p className="text-muted-foreground">
-    La rinoplastia es un procedimiento quirúrgico que modifica la forma y estructura de la nariz para mejorar
-    la armonía facial. Este procedimiento puede corregir problemas funcionales, como dificultades
-    respiratorias, o estéticos, como una nariz demasiado grande, torcida o con protuberancias.
+    La lipopapada es un procedimiento estético que elimina el exceso de grasa y piel bajo el mentón, 
+    mejorando significativamente el contorno facial. Este tratamiento es ideal para quienes desean 
+    eliminar la apariencia de "doble mentón" y lograr un perfil más definido y juvenil.
   </p>
   <p className="text-muted-foreground">
-    El Dr. Téllez utiliza técnicas avanzadas para garantizar resultados naturales y personalizados, adaptados
-    a las necesidades y deseos de cada paciente. Su enfoque artístico asegura que la nariz se integre
-    perfectamente con el resto de las facciones.
+    El Dr. Téllez utiliza técnicas mínimamente invasivas para garantizar resultados naturales con una 
+    recuperación rápida. Su enfoque personalizado asegura que cada tratamiento se adapte a las 
+    necesidades anatómicas y estéticas de cada paciente.
   </p>
   
   <div className="flex items-center gap-4 pt-4">
@@ -156,7 +155,6 @@ export default function Page() {
     </div>
   </div>
 
-  {/* Botón Agendar Cita añadido aquí */}
   <div className="pt-2">
     <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
       <Button className="w-full sm:w-auto bg-blue-900">
@@ -186,7 +184,7 @@ export default function Page() {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Beneficios</div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-blue-950">¿Por qué Elegir Rinoplastia?</h2>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-blue-950">¿Por qué Elegir Lipopapada?</h2>
             <p className="text-muted-foreground">
               Descubre los beneficios transformadores de este procedimiento facial.
             </p>
@@ -198,9 +196,9 @@ export default function Page() {
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <Sparkles className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Resultados Naturales</h3>
+                <h3 className="text-xl font-bold">Perfil Definido</h3>
                 <p className="text-muted-foreground">
-                  Una nariz que se integra armoniosamente con el resto de tus facciones.
+                  Logra un contorno facial más juvenil y definido sin doble mentón.
                 </p>
               </CardContent>
             </Card>
@@ -212,7 +210,7 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font-bold">Personalizado</h3>
                 <p className="text-muted-foreground">
-                  Diseñado para cumplir con tus expectativas y necesidades individuales.
+                  Tratamiento adaptado a tus necesidades anatómicas específicas.
                 </p>
               </CardContent>
             </Card>
@@ -224,7 +222,7 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font-bold">Recuperación Rápida</h3>
                 <p className="text-muted-foreground">
-                  Técnicas avanzadas que minimizan el tiempo de recuperación.
+                  Técnicas mínimamente invasivas que permiten una rápida recuperación.
                 </p>
               </CardContent>
             </Card>
@@ -234,9 +232,9 @@ export default function Page() {
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <Calendar className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Resultados Duraderos</h3>
+                <h3 className="text-xl font-bold">Resultados Permanentes</h3>
                 <p className="text-muted-foreground">
-                  Disfruta de los resultados de por vida con un cuidado adecuado.
+                  Las células grasas eliminadas no vuelven a aparecer.
                 </p>
               </CardContent>
             </Card>
@@ -246,9 +244,9 @@ export default function Page() {
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <ShieldCheck className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Seguridad Garantizada</h3>
+                <h3 className="text-xl font-bold">Seguro y Efectivo</h3>
                 <p className="text-muted-foreground">
-                  Realizado en instalaciones de última generación con los más altos estándares de seguridad.
+                  Procedimiento realizado con los más altos estándares de seguridad.
                 </p>
               </CardContent>
             </Card>
@@ -258,9 +256,9 @@ export default function Page() {
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <Check className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Confianza Mejorada</h3>
+                <h3 className="text-xl font-bold">Autoestima Elevada</h3>
                 <p className="text-muted-foreground">
-                  Aumenta tu autoestima con una apariencia facial equilibrada y atractiva.
+                  Mejora tu confianza con un perfil facial más armonioso.
                 </p>
               </CardContent>
             </Card>
@@ -272,10 +270,10 @@ export default function Page() {
   <div className="container">
     <div className="grid md:grid-cols-2 gap-12 items-center m-4">
       <div className="space-y-6">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">¿Lista para Transformar tu Perfil?</h2>
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">¿Listo para Transformar tu Perfil?</h2>
         <p className="text-primary-foreground/90 text-lg">
-        Da el primer paso hacia la nariz que siempre has deseado. Agenda una consulta con
-         el Dr. Téllez para discutir cómo la rinoplastia puede ayudarte a alcanzar tus metas estéticas.
+          Da el primer paso hacia un rostro más definido y juvenil. Agenda una consulta con
+          el Dr. Téllez para discutir cómo la lipopapada puede ayudarte a alcanzar tus metas estéticas.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontre%20su%20sitio%20web%20y%20me%20gustaria%C3%ADa%20realizar%20una%20consulta" target="_blank">
@@ -297,17 +295,11 @@ export default function Page() {
         >
           <CarouselContent>
             {[
-              "/rino/slide1.jpg",
-              "/rino/slide2.jpg",
-              "/rino/slide3.jpg",
-              "/rino/slide4.jpg",
-              "/rino/slide5.jpg",
-              "/rino/slide6.jpg",
-              "/rino/slide7.jpg",
-              "/rino/slide8.jpg",
-              "/rino/slide9.jpg",
-              "/rino/slide10.jpg",
-          
+              "/lipodepapada/slide1.jpg",
+              "/lipodepapada/slide2.jpg",
+              "/lipodepapada/slide3.jpg",
+              "/lipodepapada/slide4.jpg",
+              "/lipodepapada/slide5.jpg",
             ].map((imgSrc, index) => (
               <CarouselItem key={index}>
                 <div className="relative aspect-square md:aspect-auto md:h-[400px]">

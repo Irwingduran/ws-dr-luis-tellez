@@ -2,10 +2,17 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/slide1.jpg",
- "/slide2.jpg",
- "/slide3.jpg",
- "/slide4.jpg",
+  "/rino/slide1.jpg",
+ "/rino/slide2.jpg",
+ "/rino/slide3.jpg",
+ "/rino/slide4.jpg",
+ "/rino/slide5.jpg",
+ "/rino/slide6.jpg",
+ "/rino/slide7.jpg",
+ "/rino/slide8.jpg",
+ "/rino/slide9.jpg",
+ "/rino/slide10.jpg",
+
 
 ];
 

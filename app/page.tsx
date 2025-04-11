@@ -113,12 +113,8 @@ export default function Home() {
             />
           </div>
           <div className="container relative z-10 py-24 md:py-32 lg:py-40">
-            <div className="max-w-2xl space-y-4 text-white">
-            
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              
-              </div>
-            </div>
+           
+         
           </div>
         </section>
 
@@ -145,6 +141,25 @@ export default function Home() {
                     y Cirugía de Cabeza y Cuello.
                 </p>
                 <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                    <div className="rounded-full bg-primary/10 p-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4 w-4 text-primary"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    <span>Sociedad Mexicana de Otorrinolaringologia y Cirugía de Cabeza y Cuello AC</span>
+                  </li>
                   <li className="flex items-start gap-2">
                     <div className="rounded-full bg-primary/10 p-1">
                       <svg
@@ -221,57 +236,54 @@ export default function Home() {
                     </div>
                     <span>Catedrático UPAEP 2015 y 2016</span>
                   </li>
+
                 </ul>
-              
+                <div className="object-center ">
+                <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
+              <Button className="hidden md:inline-flex bg-blue-900 hover:bg-blue-700 text-white">
+               Agendar Cita
+              </Button>
+              </Link>
               </div>
+              </div>
+            
             </div>
           </div>
         </section>
 
-       {/* Presentation Vidio Section */}
-       <div className="bg-white rounded-xl p-6">
-        <div className="mb-16 flex flex-col bg-white md:flex-row items-center gap-8" style={{ maxWidth: '800px', margin: '0 auto' }}>
-
-  {/* Contenedor del video */}
-    <div className="flex-1 rounded-xl bg-white overflow-hidden shadow-lg py-6" style={{ maxHeight: '100vh', maxWidth: '400px' }}>
-    <div className="relative" style={{ paddingTop: '177.78%' }}> {/* 9:16 aspect ratio */}
-      <iframe
-        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1627772480978271&show_text=0&width=560"
-        width="100%"
-        height="100%"
-        style={{ 
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          border: 'none',
-          overflow: 'hidden',
-        }}
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
+     {/* Presentation Video Section */}
+<div className="bg-white rounded-xl p-4 md:p-6 w-full">
+  <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 max-w-4xl mx-auto">
+    {/* Contenedor del video - Ajustado para ser responsive */}
+    <div className="w-full md:w-1/2 rounded-xl bg-white overflow-hidden shadow-lg">
+      <div className="relative w-full" style={{ paddingBottom: '177.78%' }}> {/* Mantiene la relación de aspecto 9:16 */}
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1627772480978271&show_text=0&width=560"
+          className="absolute top-0 left-0 w-full h-full border-0"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
-   </div>
-
-  {/* Título y texto descriptivo */}
-  <div className="flex-1 space-y-4">
-    <h2 className="text-2xl font-bold text-blue-950">
-      Aprende más sobre el Dr. Luis M. Téllez Bernés
-    </h2>
-    <p className="text-gray-600">
-      En este video, el Dr. Téllez comparte su experiencia y enfoque en cirugía plástica y otorrinolaringología. Descubre cómo puede ayudarte a alcanzar tus objetivos de belleza y salud.
-    </p>
-    <div className="py-4">
-    <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
-      <Button className="bg-blue-900 text-white hover:bg-primary/90">
-        Agendar una cita
-      </Button>
-    </Link>
+    
+    {/* Título y texto descriptivo */}
+    <div className="w-full md:w-1/2 space-y-4 mt-4 md:mt-0">
+      <h2 className="text-xl md:text-2xl font-bold text-blue-950">
+        Aprende más sobre el Dr. Luis M. Téllez Bernés
+      </h2>
+      <p className="text-gray-600 text-sm md:text-base">
+        En este video, el Dr. Téllez comparte su experiencia y enfoque en cirugía plástica y otorrinolaringología. Descubre cómo puede ayudarte a alcanzar tus objetivos de belleza y salud.
+      </p>
+      <div className="py-2 md:py-4">
+        <a href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank" className="inline-block">
+          <button className="bg-blue-900 text-white hover:bg-blue-800 px-4 py-2 rounded-md text-sm md:text-base">
+            Agendar una cita
+          </button>
+        </a>
+      </div>
     </div>
   </div>
-        </div>
-        </div>
+</div>
   
         {/* Services Section */}
         <Services/>
