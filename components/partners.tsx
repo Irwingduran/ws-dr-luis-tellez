@@ -7,9 +7,14 @@ const Partners = () => {
     {/*  parner logo  */}
     <div className='my-12 flex flex-wrap justify-between items-center gap-8'>
       <img src="/logo/AXA.jpg" width="100px" alt="" />
+      <img src="/logo/ATLAS.avif" width="100px" alt="" />
       <img src="/logo/GNP.webp" width="100px" alt="" />
-      <img src="/logo/MAPFRE.jpg" width="100px" alt="" />
-      <img src="/logo/ATLAS.jpg" width="100px" alt="" />
+      <img src="/logo/BBVA.png" width="100px" alt="" />
+      <img src="/logo/HSBC.png" width="100px" alt="" />
+      <img src="/logo/BANORTE.png" width="100px" alt="" />
+      <img src="/logo/BANAMEX.png" width="100px" alt="" />
+      <img src="/logo/MAPFRE.PNG" width="100px" alt="" />
+      
       
 
 
