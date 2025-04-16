@@ -101,11 +101,11 @@ export default function Home() {
 </header>
 
       <main className="flex-1 p-5">
-        {/* Hero Section */}
-        <section id="home" className="relative">
+ {/* Hero Section */}
+ <section id="home" className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/bg-img.png"
+              src="/bg-img2.png"
               alt="Hero Background"
               fill
               className="object-cover brightness-[0.7] rounded-xl"
