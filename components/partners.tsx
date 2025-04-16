@@ -13,7 +13,7 @@ const Partners = () => {
       <img src="/logo/HSBC.png" width="100px" alt="" />
       <img src="/logo/BANORTE.png" width="100px" alt="" />
       <img src="/logo/BANAMEX.png" width="100px" alt="" />
-      <img src="/logo/MAPFRE.PNG" width="100px" alt="" />
+      <img src="/logo/MAPFRE.png" width="100px" alt="" />
       
       
 
