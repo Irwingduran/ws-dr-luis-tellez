@@ -12,6 +12,22 @@ const images = [
  "/rino/slide8.jpg",
  "/rino/slide9.jpg",
  "/rino/slide10.jpg",
+  "/rino/slide11.jpg",
+  "/rino/slide12.jpg",
+  "/rino/slide13.jpg",
+  "/rino/slide14.jpg",
+  "/rino/slide15.jpg",
+  "/rino/slide16.jpg",
+  "/rino/slide17.jpg",
+  "/rino/slide18.jpg",
+  "/rino/slide19.jpg",
+  "/rino/slide20.jpg",
+  "/rino/slide21.jpg",
+  "/rino/slide22.jpg",
+  "/rino/slide23.jpg",
+  "/rino/slide24.jpg",
+  "/rino/slide25.jpg",
+  "/rino/slide26.jpg",
 
 
 ];
