@@ -86,7 +86,7 @@ const Services = () => {
             <Link href="/service1">
               <div className="h-80 relative">
                 <Image
-                  src="/rino.png"
+                  src="/rino2.jpg"
                   alt="Rinoplastia"
                   fill
                   className="object-cover"
