@@ -118,6 +118,21 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contact Banner */}
+        <section className="py-16 bg-blue-950 text-primary-foreground rounded-xl p-6">
+          <div className="container">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="space-y-2 text-center md:text-left m-3">
+                <h2 className="text-2xl font-bold">¡Agenda tu cita hoy mismo!</h2>
+              </div>
+              <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
+              <Button variant="secondary" className="m-3">
+              Agenda tu cita
+              </Button></Link>
+            </div>
+          </div>
+        </section>
+
         {/* About Section */}
         <section id="about" className="py-16 md:py-24">
           <div className="container bg-blue-50">
