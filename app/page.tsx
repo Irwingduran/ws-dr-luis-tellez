@@ -101,8 +101,8 @@ export default function Home() {
 </header>
 
       <main className="flex-1 p-5">
- {/* Hero Section */}
- <section id="home" className="relative">
+      {/* Hero Section */}
+        <section id="home" className="relative">
           <div className="absolute inset-0 z-0">
             <Image
               src="/bg-img2.png"
@@ -113,28 +113,38 @@ export default function Home() {
             />
           </div>
           <div className="container relative z-10 py-24 md:py-32 lg:py-40">
-           
-         
           </div>
-        </section>
 
         {/* Contact Banner */}
-        <section className="py-16 bg-blue-950 text-primary-foreground rounded-xl p-6">
-          <div className="container">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="space-y-2 text-center md:text-left m-3">
-                <h2 className="text-2xl font-bold">¡Agenda tu cita hoy mismo!</h2>
-              </div>
-              <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
-              <Button variant="secondary" className="m-3">
-              Agenda tu cita
-              </Button></Link>
-            </div>
-          </div>
+        <div className="py-16 text-primary-foreground rounded-xl p-6">
+        </div>
         </section>
 
+        <section className="py-16">
+        <div className="bg-blue-950 rounded-2xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary text-white ">
+              Agenda tu cita con el Dr. Luis M. Téllez Bernés
+            </h2>
+            <p className="text-muted-foreground mb-6 text-white ">
+              Elige el horario que más te convenga. Las consultas están disponibles en los siguientes horarios:
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground mb-6 text-white ">
+              <li>🕘 Lunes a Viernes: 10:00 AM - 8:00 PM</li>
+              <li>🕘 Sábado: 10:00 AM - 2:00 PM</li>
+              <li>🚫 Domingo: No disponible</li>
+            </ul>
+            <Link href="https://wa.me/5212223643125?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
+            <Button className="text-base px-6 py-3 rounded-xl text-black bg-white hover:bg-slate-50 transition">
+              Agendar Cita
+            </Button></Link>
+          </div>
+
+        </div>
+      </section>
+
         {/* About Section */}
-        <section id="about" className="py-16 md:py-24">
+        <section id="about" className="py-16">
           <div className="container bg-blue-50">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-xl overflow-hidden">
