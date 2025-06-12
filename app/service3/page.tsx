@@ -295,11 +295,10 @@ export default function Page() {
         >
           <CarouselContent>
             {[
-              "/lipodepapada/slide1.jpg",
-              "/lipodepapada/slide2.jpg",
-              "/lipodepapada/slide3.jpg",
-              "/lipodepapada/slide4.jpg",
-              "/lipodepapada/slide5.jpg",
+              "/slide1.jpg",
+              "/slide2.jpg",
+              "/slide3.jpg",
+              "/slide4.jpg",
             ].map((imgSrc, index) => (
               <CarouselItem key={index}>
                 <div className="relative aspect-square md:aspect-auto md:h-[400px]">

@@ -120,6 +120,21 @@ const Carousel = React.forwardRef<
       }
     }, [api, onSelect])
 
+    React.useEffect(() => {
+      if (!api) {
+        return
+      }
+
+      const handleResize = () => api.reInit()
+      window.addEventListener("resize", handleResize)
+      window.addEventListener("orientationchange", handleResize)
+
+      return () => {
+        window.removeEventListener("resize", handleResize)
+        window.removeEventListener("orientationchange", handleResize)
+      }
+    }, [api])
+
     return (
       <CarouselContext.Provider
         value={{
