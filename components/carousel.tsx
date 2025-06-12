@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   "/rino/slide1.jpg",
- "/rino/slide2.jpg",
+ "/rino/slide2.jpg", 
  "/rino/slide3.jpg",
  "/rino/slide4.jpg",
  "/rino/slide5.jpg",
