@@ -105,7 +105,7 @@ export default function Home() {
         <section id="home" className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/bg-img2.png"
+              src="/bg-img3.png"
               alt="Hero Background"
               fill
               className="object-cover brightness-[0.7] rounded-xl"
