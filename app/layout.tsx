@@ -26,14 +26,12 @@ export default function RootLayout({
         })(window,document,'script','dataLayer','GTM-WMD2CKBW');</script>
         <!-- End Google Tag Manager -->
       </head>
-      <body>
-        <!-- Google Tag Manager (noscript) -->
+      <body>  
+            {children}
+           <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMD2CKBW"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              <!-- End Google Tag Manager (noscript) -->
-               
-        {children}
-               
        </body>
     </html>
   )
